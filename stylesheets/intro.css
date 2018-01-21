@@ -1,10 +1,10 @@
 body {
   font-family: 'Montserrat';
+  min-width: 900px;
 }
 
 header {
-  height: 200px;
-  padding: 20px 30px;
+  padding: 20px 30px 30px 30px;
   font-weight: 800;
 }
 
@@ -32,6 +32,10 @@ nav {
 nav ul li {
   display: inline-block;
   padding: 0 10px 2px;
+  color: #45c2bd;
+}
+nav li.selected {
+  color: #333;
 }
 nav ul:hover li {
   color: #45c2bd;
@@ -42,4 +46,60 @@ nav ul li:hover {
   cursor: pointer;
 }
 
+.info {
+  background-color: #161616;
+  color: #fff;
+  padding: 40px;
+  line-height: 1.5em;
+}
 
+.info h3 {
+  font-size: 28px;
+  font-weight: 800;
+  padding: 0 0 10px;
+  width: 800px;
+  line-height: 1.3em;
+}
+
+.info h4 {
+  padding: 15px 0;
+  font-weight: 500;
+}
+.about-left,
+.about-right {
+  width: 50%;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+.about-left {
+  float: left;
+  padding-right: 15px;
+}
+.about-right {
+  padding-left: 15px;
+  float: right;
+}
+
+.projects {
+  background-color: #262626;
+  height: 400px;
+  text-align: center
+}
+.projects h1 {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 800;
+  padding: 15px 8px 8px 8px;
+  border-bottom: 2px solid #45c2bd;
+  display: inline-block;
+}
+
+
+
+
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
