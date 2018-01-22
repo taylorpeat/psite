@@ -74,8 +74,12 @@ nav ul li:hover {
   font-size: 28px;
   font-weight: 800;
   padding: 0 0 10px;
-  width: 800px;
+  width: 600px;
   line-height: 1.3em;
+}
+.info h3 + p {
+  width: 80%;
+  min-width: 800px;
 }
 
 .info h4 {
@@ -125,12 +129,12 @@ nav ul li:hover {
 }
 .me .about {
   float: left;
-  width: 60%;
-  padding-right: 40px;
+  width: 65%;
+  padding-right: 60px;
   box-sizing: border-box;
 }
 .about-more {
-  width: 40%;
+  width: 35%;
   float: left;
 }
 .about-more p {
@@ -177,8 +181,9 @@ nav ul li:hover {
   display: inline-block;
   height: 300px;
   overflow: hidden;
-  border-radius: 2px;
+  border-radius: 3px;
   position: relative;
+  box-sizing: border-box;
 }
 .projects figure + figure {
   margin-left: 2%;
@@ -270,10 +275,10 @@ figure:hover .details {
 }
 .details ul:last-of-type li {
   border: 2px solid #fff;
-  font-weight: 800;
+  font-weight: 500;
   padding: 5px;
   margin: 8px 8px;
-  border-radius: 2px;
+  border-radius: 3px;
   float: left;
 }
 .details ul:last-of-type li:hover {
@@ -328,7 +333,7 @@ a:-webkit-any-link {
 
 main {
   margin: 0 auto;
-  padding: 40px;
+  padding: 15px 40px;
   width: 900px;
   color: #fff;
   letter-spacing: 0.75px;
@@ -364,7 +369,7 @@ main a {
   padding-left: 20px;
 }
 .project-example:first-of-type {
-  padding-bottom: 4px;
+  padding-bottom: 6px;
 }
 .project-example > a {
   color: #fff;
