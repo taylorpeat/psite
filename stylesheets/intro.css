@@ -269,27 +269,26 @@ figure:hover .details {
   background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.6));
 }
 .details ul:last-of-type li {
-  text-decoration: underline;
+  border: 2px solid #fff;
   font-weight: 800;
-  padding: 15px;
+  padding: 5px;
+  margin: 8px 8px;
+  border-radius: 2px;
+  float: left;
 }
 .details ul:last-of-type li:hover {
   color: #aaa;
+  border-color: #aaa;
   transition: all 0.2s;
   cursor: pointer;
 }
-.details ul:last-of-type li:first-of-type {
-  float: left;
-}
-.details ul:last-of-type li:last-of-type {
-  float: right;
-}
 .details h3 {
-  font-size: 32px;
+  font-size: 28px;
   position: absolute;
   bottom: 0;
-  padding-bottom: 8px;
-  transform: translateX(-50%);
+  left: auto;
+  right: 0;
+  padding: 0 12px 10px;
 }
 
 .contact ul {
@@ -325,4 +324,108 @@ a:-webkit-any-link {
   content: "";
   clear: both;
   display: block;
+}
+
+main {
+  margin: 0 auto;
+  padding: 40px;
+  width: 900px;
+  color: #fff;
+  letter-spacing: 0.75px;
+  line-height: 1.5em;
+}
+
+main h3 {
+  padding-bottom: 10px;
+  font-weight: 800;
+}
+
+main p + h3,
+main ul + h3,
+main div + h3 {
+  padding-top: 34px;
+}
+
+main ul li,
+main p {
+  color: #6d6f70;
+}
+main ul,
+main p,
+main h4 {
+  margin-left: 20px;
+}
+
+main a {
+  text-decoration: underline;
+}
+
+.project-example {
+  padding-left: 20px;
+}
+.project-example:first-of-type {
+  padding-bottom: 4px;
+}
+.project-example > a {
+  color: #fff;
+  float: left;
+}
+.project-example p {
+  width: 95%;
+  margin-left: 60px;
+}
+.project-example a:hover {
+  cursor: pointer;
+}
+.project-example p a:hover {
+  color: #fff;
+}
+main h4 {
+  padding-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+main h4 i {
+  color: #6d6f70;
+  padding-left: 10px;
+}
+main h4 span {
+  float: right;
+}
+
+main ul + h4 {
+  padding-top: 10px;
+}
+
+main ul {
+  list-style: square;
+  margin-left: 55px;
+}
+
+main .num {
+  float: right;
+}
+main .email {
+  float: left;
+}
+
+.resume-contact {
+  margin: 0;
+}
+
+.resume-contact li {
+  margin: 0;
+  display: inline-block;
+  width: 48%;
+  text-align: center;
+}
+.resume-contact li:first-child {
+  text-align: left;
+  width: 25%;
+}
+.resume-contact li:last-child {
+  text-align: right;
+  width: 25%;
+}
+.resume-contact li.separator {
+  width: 1%;
 }
