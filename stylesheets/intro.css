@@ -66,7 +66,7 @@ nav ul li:hover {
   padding: 40px;
   line-height: 1.6em;
   min-width: 900px;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -102,7 +102,9 @@ nav ul li:hover {
   float: right;
 }
 .trifold {
-  padding: 60px 20px 40px 20px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .trifold div {
   width: 33%;
@@ -162,7 +164,7 @@ nav ul li:hover {
   padding: 60px 40px 20px 40px;
   text-align: center;
   min-width: 900px;
-  max-width: 1200px
+  max-width: 1400px
 }
 .projects-container {
   display: inline-block;
@@ -184,6 +186,7 @@ nav ul li:hover {
   border-radius: 3px;
   position: relative;
   box-sizing: border-box;
+  background-size: cover;
 }
 .projects figure + figure {
   margin-left: 2%;
@@ -194,18 +197,23 @@ nav ul li:hover {
 }
 .trello {
   width: 60%;
+  background: url("../images/trello.png");
 }
 .myflix {
   width: 38%;
+  background: url("../images/myflix.png");
 }
 .yelp {
   width: 32%;
+  background: url("../images/yelp.png");
 }
 .todo {
   width: 32%;
+  background: url("../images/todo.png");
 }
 .postit {
   width: 32%;
+  background: url("../images/postit.png");
 }
 
 
@@ -240,48 +248,38 @@ figure:hover .overlay {
   position: absolute;
   opacity: 0;
   transition: all 0.2s ease-in;
-  left: 0;
-  right: 0;
+  top: 0;
+  right: -50%;
   bottom: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.8),rgba(0,0,0,0.6));
+  padding: 0 10px;
 }
 figure:hover .details {
   opacity: 1;
-  transition: all 0.2s ease-in;
+  right: 0;
+  transition: all 0.3s ease-in;
 }
 .details ul li {
   color: #fff;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
 }
-.details ul:first-of-type {
-  text-align: center;
-  padding: 0 20px 10px 20px;
-}
-.details ul:first-of-type li {
-  display: inline-block;
-  padding: 10px;
-  margin-bottom: 10px
-}
-.details ul:first-of-type li + li {
-  margin-left: 4px;
-}
-.details ul:first-of-type li {
-  border-radius: 3px;
-  background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.6));
-}
-
 .details ul:last-of-type {
-  background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.6));
+  text-align: left;
 }
 .details ul:last-of-type li {
+  padding: 4px;
+  margin-bottom: 2px
+}
+
+.details ul:first-of-type li {
   border: 2px solid #fff;
   font-weight: 500;
   padding: 5px;
-  margin: 8px 8px;
+  margin: 8px 2px;
   border-radius: 3px;
-  float: left;
 }
-.details ul:last-of-type li:hover {
+.details ul:first-of-type li:hover {
   color: #aaa;
   border-color: #aaa;
   transition: all 0.2s;
@@ -289,11 +287,9 @@ figure:hover .details {
 }
 .details h3 {
   font-size: 28px;
-  position: absolute;
+  padding: 0 0 10px;
   bottom: 0;
-  left: auto;
-  right: 0;
-  padding: 0 12px 10px;
+  transform: translateX(-50%);
 }
 
 .contact ul {
