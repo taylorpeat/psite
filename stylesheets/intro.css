@@ -68,8 +68,8 @@ nav ul li:hover {
   min-width: 900px;
   max-width: 1400px;
   margin: 0 auto;
+  position: relative;
 }
-
 .info h3 {
   font-size: 28px;
   font-weight: 800;
@@ -80,13 +80,17 @@ nav ul li:hover {
 .info h3 + p {
   width: 80%;
   min-width: 800px;
+  padding-bottom: 30px;
 }
-
 .info h4 {
   padding: 16px 0;
   font-weight: 800;
   font-size: 16px;
 }
+.info > h4 {
+  position: relative;
+}
+
 .about-left,
 .about-right {
   width: 50%;
@@ -102,7 +106,7 @@ nav ul li:hover {
   float: right;
 }
 .trifold {
-  padding: 40px 20px;
+  padding: 0 20px 40px 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -114,6 +118,9 @@ nav ul li:hover {
 }
 .trifold div + div {
   padding-left: 70px;
+}
+.trifold h4 {
+  padding: 0 0 16px;
 }
 .trifold i {
   line-height: 100px;
@@ -139,8 +146,12 @@ nav ul li:hover {
   width: 35%;
   float: left;
 }
-.about-more p {
-  /*color: #6d6f70*/
+.about-more p a {
+  text-decoration: underline;
+  text-decoration-color: #6d6f70; 
+}
+.about-more p a:hover {
+  text-decoration-color: #fff;
 }
 .icon:before {
   font-family: "linea-basic-10";
@@ -207,9 +218,9 @@ nav ul li:hover {
   width: 32%;
   background: url("../images/yelp.png");
 }
-.todo {
+.music-store {
   width: 32%;
-  background: url("../images/todo.png");
+  background: url("../images/music_store.png");
 }
 .postit {
   width: 32%;
@@ -357,7 +368,7 @@ main h4 {
   margin-left: 20px;
 }
 
-main a {
+main .project-example a {
   text-decoration: underline;
 }
 
@@ -391,6 +402,10 @@ main h4 i {
 }
 main h4 span {
   float: right;
+  color: #2a2a2a;
+  font-size: 30px;
+  position: relative;
+
 }
 
 main ul + h4 {
