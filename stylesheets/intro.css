@@ -10,7 +10,6 @@
 body {
   font-family: 'Montserrat';
   font-size: 16px;
-  min-width: 900px;
   background-color: #161616;
 }
 
@@ -65,13 +64,12 @@ nav ul li:hover {
   letter-spacing: 0.75px;
   padding: 40px;
   line-height: 1.6em;
-  min-width: 900px;
   max-width: 1400px;
   margin: 0 auto;
   position: relative;
 }
 .info h3 {
-  font-size: 28px;
+  font-size: 1.75em;
   font-weight: 800;
   padding: 0 0 10px;
   width: 600px;
@@ -79,13 +77,11 @@ nav ul li:hover {
 }
 .info h3 + p {
   width: 80%;
-  min-width: 800px;
   padding-bottom: 30px;
 }
 .info h4 {
   padding: 16px 0;
   font-weight: 800;
-  font-size: 16px;
 }
 .info > h4 {
   position: relative;
@@ -136,7 +132,7 @@ nav ul li:hover {
 .me {
   padding-top: 20px;
 }
-.me .about {
+.about {
   float: left;
   width: 65%;
   padding-right: 60px;
@@ -155,7 +151,7 @@ nav ul li:hover {
 }
 .icon:before {
   font-family: "linea-basic-10";
-  font-size: 90px;
+  font-size: 5.625em;
   display: block;
 }
 .protractor:before {
@@ -168,13 +164,18 @@ nav ul li:hover {
   font-family: "linea-basic-elaboration-10";
   content: "\e00d";
 }
+.trophy:before {
+  content: "C";
+}
+.house:before {
+  content: "Z";
+}
 
 .contact,
 .projects {
   margin: 0 auto;
   padding: 60px 40px 20px 40px;
   text-align: center;
-  min-width: 900px;
   max-width: 1400px
 }
 .projects-container {
@@ -186,7 +187,6 @@ nav ul li:hover {
 .projects h1 {
   text-align: left;
   color: #fff;
-  font-size: 16px;
   font-weight: 800;
   padding-bottom: 20px;
 }
@@ -238,7 +238,7 @@ nav ul li:hover {
 }
 figure h3 {
   color: #fff;
-  font-size: 42px;
+  font-size: 2.625em;
   font-weight: 800;
   transition: opacity 0.2s;
   position: absolute;
@@ -272,7 +272,6 @@ figure:hover .details {
 }
 .details ul li {
   color: #fff;
-  font-size: 16px;
   font-weight: 500;
 }
 .details ul:last-of-type {
@@ -297,7 +296,7 @@ figure:hover .details {
   cursor: pointer;
 }
 .details h3 {
-  font-size: 28px;
+  font-size: 1.75em;
   padding: 0 0 10px;
   bottom: 0;
   transform: translateX(-50%);
@@ -338,10 +337,108 @@ a:-webkit-any-link {
   display: block;
 }
 
+@media (max-width: 900px) {
+  .title h1 {
+    font-size: 40px;
+    padding-bottom: 6px;
+  }
+  .title h2 {
+    font-size: 20px;
+  }
+  .info h3 + p {
+    width: 100%;
+  }
+  .trifold {
+    text-align: center;
+    padding: 0 0 40px 0;
+  }
+  .trifold div {
+    width: 100%;
+  }
+  .trifold div + div {
+    padding: 40px 0 0 0;
+  }
+  .about,
+  .about-more {
+    width: 100%;
+  }
+  .about {
+    padding: 0;
+  }
+  .about-more {
+    padding-top: 30px;
+  }
+  .trello,
+  .myflix,
+  .yelp,
+  .music-store,
+  .postit {
+    width: 100%;
+  }
+  .projects figure + figure {
+    margin-left: 0;
+    margin-top: 30px;
+  }
+  .contact li:first-child {
+    width: 100%;
+  }
+}
+
+@media (max-width: 760px) {
+  header {
+    padding-bottom: 10px;
+  }
+  nav {
+    clear: both;
+    padding-top: 30px;
+  }
+  nav li:first-child {
+    padding-left: 0;
+  }
+}
+
+
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+  .title h1 {
+    font-size: 32px;
+  }
+  .title h1 + p {
+    font-size: 16px;
+  }
+  nav {
+    font-size: 18px;
+  }
+  .info h3 {
+    width: auto;
+  }
+  .contact ul li {
+    display: inline-block;
+    width: 100%;
+    padding: 8px 0 0 0;
+    text-align: center
+  }
+  .contact ul li:first-child {
+    text-align: center;
+    width: 100%;
+  }
+  .contact ul {
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
 main {
   margin: 0 auto;
   padding: 15px 40px;
-  width: 900px;
+  max-width: 900px;
   color: #fff;
   letter-spacing: 0.75px;
   line-height: 1.5em;
@@ -395,17 +492,18 @@ main .project-example a {
 main h4 {
   padding-bottom: 6px;
   letter-spacing: 0.5px;
+  position: relative;
 }
 main h4 i {
   color: #6d6f70;
   padding-left: 10px;
 }
-main h4 span {
-  float: right;
+main h4 span:last-child {
   color: #2a2a2a;
-  font-size: 30px;
-  position: relative;
-
+  font-size: 1.875em;
+  position: absolute;
+  right: 0;
+  z-index: -1;
 }
 
 main ul + h4 {
@@ -444,4 +542,31 @@ main .email {
 }
 .resume-contact li.separator {
   width: 1%;
+}
+
+@media (max-width: 900px) {
+  main h4 i:first-of-type {
+    display: none;
+  }
+  main h4 i:last-of-type {
+    padding: 0;
+  }
+  main h4 span:first-child {
+    display: block;
+  }
+}
+
+@media (max-width: 500px) {
+  .resume-name {
+    display: block;
+  }
+  .resume-contact .separator {
+    display: none;
+  }
+  .resume-contact li,
+  .resume-contact li:last-child,
+  .resume-contact li:first-child {
+    width: 100%;
+    text-align: left;
+  }
 }
